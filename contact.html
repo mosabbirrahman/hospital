@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Harmony Medical Center</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#670D2F',
+                        secondary: '#F8F9FA',
+                        accent: '#D4AFB9',
+                        dark: '#212529',
+                    },
+                    fontFamily: {
+                        poppins: ['Poppins', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        .contact-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        input:focus, textarea:focus, select:focus {
+            outline: none;
+            ring: 2px;
+            ring-color: #D4AFB9;
+        }
+    </style>
+</head>
+<body class="font-poppins bg-secondary text-dark">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md fixed w-full z-50">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <div class="text-2xl font-bold text-primary mr-2">HARMONY</div>
+                <span class="text-sm font-medium bg-primary text-white px-2 py-1 rounded">MEDICAL</span>
+            </div>
+            
+            <div class="hidden lg:flex items-center space-x-8">
+                <a href="./index.html" class="font-medium hover:text-primary transition">Home</a>
+                <a href="./doctor.html" class="font-medium hover:text-primary transition">Our Doctors</a>
+                <a href="./service.html" class="font-medium hover:text-primary transition">Services</a>
+                <a href="./about.html" class="font-medium hover:text-primary transition">About Us</a>
+                <a href="./contact.html" class="font-medium text-primary border-b-2 border-primary pb-1">Contact</a>
+                <button class="bg-primary text-white px-6 py-2 rounded-lg hover:bg-opacity-90 transition font-medium shadow-md">
+                    <i class="fas fa-calendar-check mr-2"></i>Book Appointment
+                </button>
+            </div>
+            
+            <button class="lg:hidden focus:outline-none" id="menu-toggle">
+                <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div class="lg:hidden hidden bg-white w-full py-4 px-6 shadow-lg" id="mobile-menu">
+            <a href="./index.html" class="block py-2 hover:text-primary transition">Home</a>
+            <a href="./doctor.html" class="block py-2 hover:text-primary transition">Our Doctors</a>
+            <a href="./service.html" class="block py-2 hover:text-primary transition">Services</a>
+            <a href="./about.html" class="block py-2 hover:text-primary transition">About Us</a>
+            <a href="./contact.html" class="block py-2 font-medium text-primary">Contact</a>
+            <button class="bg-primary text-white px-6 py-2 rounded-lg hover:bg-opacity-90 transition font-medium mt-2 w-full">
+                <i class="fas fa-calendar-check mr-2"></i>Book Appointment
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 bg-primary text-white">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Contact Our Medical Team</h1>
+            <p class="text-xl max-w-3xl mx-auto opacity-90">We're here to answer your questions and help you schedule appointments. Reach out to us today.</p>
+        </div>
+    </section>
+
+    <!-- Contact Options -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Contact Card 1 -->
+                <div class="contact-card bg-secondary rounded-xl p-8 text-center hover:shadow-lg transition">
+                    <div class="bg-primary text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 text-2xl">
+                        <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">By Phone</h3>
+                    <p class="text-gray-600 mb-4">Speak directly with our friendly staff during office hours.</p>
+                    <div class="space-y-2">
+                        <p class="font-medium">Main: <a href="tel:5551234567" class="text-primary hover:underline">(555) 123-4567</a></p>
+                        <p class="font-medium">Appointments: <a href="tel:5559876543" class="text-primary hover:underline">(555) 987-6543</a></p>
+                        <p class="text-sm text-gray-500">Mon-Fri: 8am-7pm | Sat: 9am-3pm</p>
+                    </div>
+                </div>
+                
+                <!-- Contact Card 2 -->
+                <div class="contact-card bg-secondary rounded-xl p-8 text-center hover:shadow-lg transition">
+                    <div class="bg-primary text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 text-2xl">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">By Email</h3>
+                    <p class="text-gray-600 mb-4">Send us your questions and we'll respond within 24 hours.</p>
+                    <div class="space-y-2">
+                        <p class="font-medium">General Inquiries: <a href="mailto:info@harmonymedical.com" class="text-primary hover:underline">info@harmonymedical.com</a></p>
+                        <p class="font-medium">Appointments: <a href="mailto:appointments@harmonymedical.com" class="text-primary hover:underline">appointments@harmonymedical.com</a></p>
+                        <p class="font-medium">Billing: <a href="mailto:billing@harmonymedical.com" class="text-primary hover:underline">billing@harmonymedical.com</a></p>
+                    </div>
+                </div>
+                
+                <!-- Contact Card 3 -->
+                <div class="contact-card bg-secondary rounded-xl p-8 text-center hover:shadow-lg transition">
+                    <div class="bg-primary text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 text-2xl">
+                        <i class="fas fa-calendar-check"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Online Booking</h3>
+                    <p class="text-gray-600 mb-4">Schedule appointments 24/7 through our patient portal.</p>
+                    <button class="bg-primary text-white px-6 py-2 rounded-lg hover:bg-opacity-90 transition font-medium mt-4">
+                        Book Appointment Online
+                    </button>
+                    <p class="text-sm text-gray-500 mt-3">Existing patients can also access test results.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form & Map -->
+    <section class="py-16 bg-secondary">
+        <div class="container mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-12">
+                <!-- Contact Form -->
+                <div class="bg-white rounded-xl shadow-lg p-8">
+                    <h2 class="text-2xl font-bold mb-6">Send Us a Message</h2>
+                    <form id="contactForm">
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="firstName" class="block text-gray-700 font-medium mb-2">First Name *</label>
+                                <input type="text" id="firstName" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary">
+                            </div>
+                            <div>
+                                <label for="lastName" class="block text-gray-700 font-medium mb-2">Last Name *</label>
+                                <input type="text" id="lastName" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary">
+                            </div>
+                        </div>
+                        
+                        <div class="mt-6">
+                            <label for="email" class="block text-gray-700 font-medium mb-2">Email *</label>
+                            <input type="email" id="email" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary">
+                        </div>
+                        
+                        <div class="mt-6">
+                            <label for="phone" class="block text-gray-700 font-medium mb-2">Phone Number</label>
+                            <input type="tel" id="phone" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary">
+                        </div>
+                        
+                        <div class="mt-6">
+                            <label for="department" class="block text-gray-700 font-medium mb-2">Department</label>
+                            <select id="department" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary">
+                                <option value="">Select Department</option>
+                                <option value="appointments">Appointments</option>
+                                <option value="billing">Billing</option>
+                                <option value="general">General Inquiry</option>
+                                <option value="medical">Medical Questions</option>
+                                <option value="feedback">Feedback</option>
+                            </select>
+                        </div>
+                        
+                        <div class="mt-6">
+                            <label for="message" class="block text-gray-700 font-medium mb-2">Message *</label>
+                            <textarea id="message" rows="5" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="bg-primary text-white px-8 py-3 rounded-lg hover:bg-opacity-90 transition font-medium mt-6 w-full">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+                
+                <!-- Location Info & Map -->
+                <div>
+                    <div class="bg-white rounded-xl shadow-lg p-8 mb-8">
+                        <h2 class="text-2xl font-bold mb-6">Our Location</h2>
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <div class="text-primary text-xl mr-4 mt-1">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold">Harmony Medical Center</h3>
+                                    <p class="text-gray-600">123 Medical Center Drive<br>Healthville, HV 12345</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center">
+                                <div class="text-primary text-xl mr-4">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold">Hours of Operation</h3>
+                                    <p class="text-gray-600">
+                                        Monday-Friday: 8:00 AM - 7:00 PM<br>
+                                        Saturday: 9:00 AM - 3:00 PM<br>
+                                        Sunday: Closed
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center">
+                                <div class="text-primary text-xl mr-4">
+                                    <i class="fas fa-parking"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold">Parking Information</h3>
+                                    <p class="text-gray-600">Free patient parking available in front and rear of building. Handicap accessible spaces near all entrances.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Map -->
+                    <div class="rounded-xl overflow-hidden shadow-lg h-96">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.215209179342!2d-73.98784492416407!3d40.74844097138989!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259a9b3117469%3A0xd134e199a405a163!2sEmpire%20State%20Building!5e0!3m2!1sen!2sus!4v1689876423581!5m2!1sen!2sus" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Emergency Notice -->
+    <section class="py-8 bg-red-50 border-t border-b border-red-100">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="flex items-center mb-4 md:mb-0 md:mr-6">
+                    <div class="bg-red-100 text-red-600 rounded-full p-3 mr-4">
+                        <i class="fas fa-exclamation-triangle text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-red-700">Medical Emergency?</h3>
+                </div>
+                <div class="md:border-l md:border-red-200 md:pl-6">
+                    <p class="text-red-600">If this is a medical emergency, please call <strong>911</strong> or go to your nearest emergency room. Do not use this form for urgent medical needs.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <span class="text-primary font-medium">HAVE QUESTIONS?</span>
+                <h2 class="text-3xl font-bold mt-2">Frequently Asked Questions</h2>
+            </div>
+            
+            <div class="max-w-3xl mx-auto">
+                <!-- FAQ Item 1 -->
+                <div class="border-b border-gray-200 py-4">
+                    <button class="faq-toggle flex justify-between items-center w-full text-left">
+                        <h3 class="text-lg font-medium">How do I schedule an appointment?</h3>
+                        <i class="fas fa-chevron-down text-primary transition-transform"></i>
+                    </button>
+                    <div class="faq-content hidden mt-3 text-gray-600">
+                        <p>You can schedule appointments three ways: by calling our appointment line at (555) 987-6543, using our online patient portal, or by visiting our clinic in person. New patients should arrive 15 minutes early to complete paperwork.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 2 -->
+                <div class="border-b border-gray-200 py-4">
+                    <button class="faq-toggle flex justify-between items-center w-full text-left">
+                        <h3 class="text-lg font-medium">What insurance plans do you accept?</h3>
+                        <i class="fas fa-chevron-down text-primary transition-transform"></i>
+                    </button>
+                    <div class="faq-content hidden mt-3 text-gray-600">
+                        <p>We accept most major insurance plans including Medicare and Medicaid. Please contact our billing department at (555) 123-4567 ext. 2 to verify your specific coverage. We also offer self-pay options and payment plans.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 3 -->
+                <div class="border-b border-gray-200 py-4">
+                    <button class="faq-toggle flex justify-between items-center w-full text-left">
+                        <h3 class="text-lg font-medium">How do I get prescription refills?</h3>
+                        <i class="fas fa-chevron-down text-primary transition-transform"></i>
+                    </button>
+                    <div class="faq-content hidden mt-3 text-gray-600">
+                        <p>For prescription refills, please contact your pharmacy first. They will send us the refill request electronically. Allow 48 hours for processing. For controlled substances, you may need to schedule an appointment.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 4 -->
+                <div class="border-b border-gray-200 py-4">
+                    <button class="faq-toggle flex justify-between items-center w-full text-left">
+                        <h3 class="text-lg font-medium">What should I bring to my first appointment?</h3>
+                        <i class="fas fa-chevron-down text-primary transition-transform"></i>
+                    </button>
+                    <div class="faq-content hidden mt-3 text-gray-600">
+                        <p>Please bring your insurance card, photo ID, list of current medications, medical records if transferring care, and any relevant test results. New patient forms are available on our website to complete beforehand.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 5 -->
+                <div class="border-b border-gray-200 py-4">
+                    <button class="faq-toggle flex justify-between items-center w-full text-left">
+                        <h3 class="text-lg font-medium">Do you offer telehealth appointments?</h3>
+                        <i class="fas fa-chevron-down text-primary transition-transform"></i>
+                    </button>
+                    <div class="faq-content hidden mt-3 text-gray-600">
+                        <p>Yes, we offer telehealth visits for established patients with non-emergency conditions. These can be scheduled like regular appointments. You'll receive a secure link to join your virtual visit at your appointment time.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <p class="text-gray-600 mb-4">Didn't find your answer here?</p>
+                <button class="bg-primary text-white px-8 py-3 rounded-lg hover:bg-opacity-90 transition font-medium">
+                    Contact Our Support Team
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white pt-16 pb-8">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8 mb-12">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <div class="text-2xl font-bold text-white mr-2">HARMONY</div>
+                        <span class="text-sm font-medium bg-primary text-white px-2 py-1 rounded">MEDICAL</span>
+                    </div>
+                    <p class="text-gray-400 mb-6">Providing compassionate, high-quality healthcare for our community since 2005.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white transition">Home</a></li>
+                        <li><a href="doctors.html" class="text-gray-400 hover:text-white transition">Our Doctors</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-white transition">Services</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-white transition">About Us</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Medical Services</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Primary Care</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Pediatrics</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Women's Health</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Cardiology</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">View All Services</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Contact Information</h3>
+                    <address class="not-italic text-gray-400">
+                        <p class="flex items-start mb-3">
+                            <i class="fas fa-map-marker-alt mt-1 mr-3 text-primary"></i>
+                            <span>123 Medical Center Drive<br>Healthville, HV 12345</span>
+                        </p>
+                        <p class="flex items-center mb-3">
+                            <i class="fas fa-phone-alt mr-3 text-primary"></i>
+                            <span>Main: (555) 123-4567<br>Appointments: (555) 987-6543</span>
+                        </p>
+                        <p class="flex items-center">
+                            <i class="fas fa-envelope mr-3 text-primary"></i>
+                            <span>info@harmonymedical.com</span>
+                        </p>
+                    </address>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm">&copy; 2023 Harmony Medical Center. All rights reserved.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="text-gray-400 hover:text-white text-sm transition">Privacy Policy</a>
+                    <a href="#" class="text-gray-400 hover:text-white text-sm transition">Terms of Service</a>
+                    <a href="#" class="text-gray-400 hover:text-white text-sm transition">Accessibility</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/contact.js"></script>
+</body>
+</html>

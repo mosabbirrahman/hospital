@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Medical Services | Harmony Medical Center</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#670D2F',
+                        secondary: '#F8F9FA',
+                        accent: '#D4AFB9',
+                        dark: '#212529',
+                    },
+                    fontFamily: {
+                        poppins: ['Poppins', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        .service-icon {
+            transition: all 0.3s ease;
+        }
+        .service-card:hover .service-icon {
+            transform: scale(1.1);
+            color: #670D2F;
+        }
+    </style>
+</head>
+<body class="font-poppins bg-secondary text-dark">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md fixed w-full z-50">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <div class="text-2xl font-bold text-primary mr-2">HARMONY</div>
+                <span class="text-sm font-medium bg-primary text-white px-2 py-1 rounded">MEDICAL</span>
+            </div>
+            
+            <div class="hidden lg:flex items-center space-x-8">
+                <a href="./index.html" class="font-medium hover:text-primary transition">Home</a>
+                <a href="./doctor.html" class="font-medium hover:text-primary transition">Our Doctors</a>
+                <a href="./service.html" class="font-medium text-primary border-b-2 border-primary pb-1">Services</a>
+                <a href = "./about.html" class="font-medium hover:text-primary transition">About Us</a>
+                <a href="./contact.html" class="font-medium hover:text-primary transition">Contact</a>
+                <button class="bg-primary text-white px-6 py-2 rounded-lg hover:bg-opacity-90 transition font-medium shadow-md">
+                    <i class="fas fa-calendar-check mr-2"></i>Book Appointment
+                </button>
+            </div>
+            
+            <button class="lg:hidden focus:outline-none" id="menu-toggle">
+                <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div class="lg:hidden hidden bg-white w-full py-4 px-6 shadow-lg" id="mobile-menu">
+            <a href="./index.html" class="block py-2 hover:text-primary transition">Home</a>
+            <a href="./doctor.html" class="block py-2 hover:text-primary transition">Our Doctors</a>
+            <a href="./service.html" class="block py-2 font-medium text-primary">Services</a>
+            <a href="./about.html" class="block py-2 hover:text-primary transition">About Us</a>
+            <a href="./contact.html" class="block py-2 hover:text-primary transition">Contact</a>
+            <button class="bg-primary text-white px-6 py-2 rounded-lg hover:bg-opacity-90 transition font-medium mt-2 w-full">
+                <i class="fas fa-calendar-check mr-2"></i>Book Appointment
+            </button>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="pt-32 pb-20 bg-primary text-white">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Our Medical Services</h1>
+            <p class="text-xl max-w-3xl mx-auto opacity-90">Comprehensive healthcare services designed to meet all your family's medical needs in one convenient location.</p>
+        </div>
+    </section>
+
+    <!-- Services Categories -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <span class="text-primary font-medium">OUR SPECIALTIES</span>
+                <h2 class="text-3xl font-bold mt-2">Healthcare Services by Department</h2>
+            </div>
+            
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <a href="#primary-care" class="bg-secondary rounded-xl p-6 text-center hover:shadow-lg transition group">
+                    <div class="service-icon text-primary text-4xl mb-4">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Primary Care</h3>
+                    <p class="text-gray-600 text-sm">Routine checkups and preventive care</p>
+                </a>
+                
+                <a href="#pediatrics" class="bg-secondary rounded-xl p-6 text-center hover:shadow-lg transition group">
+                    <div class="service-icon text-primary text-4xl mb-4">
+                        <i class="fas fa-baby"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Pediatrics</h3>
+                    <p class="text-gray-600 text-sm">Child healthcare from birth to adolescence</p>
+                </a>
+                
+                <a href="#womens-health" class="bg-secondary rounded-xl p-6 text-center hover:shadow-lg transition group">
+                    <div class="service-icon text-primary text-4xl mb-4">
+                        <i class="fas fa-female"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Women's Health</h3>
+                    <p class="text-gray-600 text-sm">Comprehensive gynecological care</p>
+                </a>
+                
+                <a href="#cardiology" class="bg-secondary rounded-xl p-6 text-center hover:shadow-lg transition group">
+                    <div class="service-icon text-primary text-4xl mb-4">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Cardiology</h3>
+                    <p class="text-gray-600 text-sm">Heart health and cardiovascular care</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Primary Care Services -->
+    <section id="primary-care" class="py-16 bg-secondary">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center mb-12">
+                <div class="md:w-1/2 mb-8 md:mb-0">
+                    <span class="text-primary font-medium">PRIMARY CARE</span>
+                    <h2 class="text-3xl font-bold mt-2">Comprehensive Adult Medicine</h2>
+                    <p class="text-gray-600 mt-4">Our primary care physicians provide personalized, continuous care for adults, focusing on preventive medicine and management of chronic conditions.</p>
+                </div>
+                <div class="md:w-1/2 md:pl-10">
+                    <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=880&q=80" alt="Primary Care" class="rounded-xl shadow-lg w-full">
+                </div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="service-card bg-white rounded-xl p-6 hover:shadow-lg transition">
+                    <div class="service-icon text-primary text-3xl mb-4">
+                        <i class="fas fa-stethoscope"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Annual Physical Exams</h3>
+                    <p class="text-gray-600 mb-4">Comprehensive health assessments including screenings, vaccinations, and personalized health advice.</p>
+                    <a href="#" class="text-primary font-medium hover:underline inline-flex items-center">
+                        Learn more <i class="fas fa-chevron-right ml-1 text-sm"></i>
+                    </a>
+                </div>
+                
+                <div class="service-card bg-white rounded-xl p-6 hover:shadow-lg transition">
+                    <div class="service-icon text-primary text-3xl mb-4">
+                        <i class="fas fa-vial"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Chronic Disease Management</h3>
+                    <p class="text-gray-600 mb-4">Personalized care plans for diabetes, hypertension, cholesterol, and other chronic conditions.</p>
+                    <a href="#" class="text-primary font-medium hover:underline inline-flex items-center">
+                        Learn more <i class="fas fa-chevron-right ml-1 text-sm"></i>
+                    </a>
+                </div>
+                
+                <div class="service-card bg-white rounded-xl p-6 hover:shadow-lg transition">
+                    <div class="service-icon text-primary text-3xl mb-4">
+                        <i class="fas fa-syringe"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Vaccinations & Immunizations</h3>
+                    <p class="text-gray-600 mb-4">All recommended vaccines including flu shots, pneumonia, shingles, and travel vaccines.</p>
+                    <a href="#" class="text-primary font-medium hover:underline inline-flex items-center">
+                        Learn more <i class="fas fa-chevron-right ml-1 text-sm"></i>
+                    </a>
+                </div>
+                
+                <div class="service-card bg-white rounded-xl p-6 hover:shadow-lg transition">
+                    <div class="service-icon text-primary text-3xl mb-4">
+                        <i class="fas fa-pills"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Medication Management</h3>
+                    <p class="text-gray-600 mb-4">Expert review and optimization of all medications to ensure safety and effectiveness.</p>
+                    <a href="#" class="text-primary font-medium hover:underline inline-flex items-center">
+                        Learn more <i class="fas fa-chevron-right ml-1 text-sm"></i>
+                    </a>
+                </div>
+                
+                <div class="service-card bg-white rounded-xl p-6 hover:shadow-lg transition">
+                    <div class="service-icon text-primary text-3xl mb-4">
+                        <i class="fas fa-procedures"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Minor Procedures</h3>
+                    <p class="text-gray-600 mb-4">In-office procedures including skin biopsies, joint injections, and wound care.</p>
+                    <a href="#" class="text-primary font-medium hover:underline inline-flex items-center">
+                        Learn more <i class="fas fa-chevron-right ml-1 text-sm"></i>
+                    </a>
+                </div>
+                
+                <div class="service-card bg-white rounded-xl p-6 hover:shadow-lg transition">
+                    <div class="service-icon text-primary text-3xl mb-4">
+                        <i class="fas fa-notes-medical"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Health Risk Assessments</h3>
+                    <p class="text-gray-600 mb-4">Personalized evaluations of your health risks and strategies for prevention.</p>
+                    <a href="#" class="text-primary font-medium hover:underline inline-flex items-center">
+                        Learn more <i class="fas fa-chevron-right ml-1 text-sm"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pediatrics Services -->
+    <section id="pediatrics" class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center mb-12">
+                <div class="md:w-1/2 mb-8 md:mb-0 order-2 md:order-1">
+                    <img src="https://images.unsplash.com/photo-1579684453423-f84349ef60b0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=686&q=80" alt="Pediatrics" class="rounded-xl shadow-lg w-full">
+                </div>
+                <div class="md:w-1/2 md:pr-10 order-1 md:order-2">
+                    <span class="text-primary font-medium">PEDIATRICS</span>
+                    <h2 class="text-3xl font-bold mt-2">Specialized Care for Children</h2>
+                    <p class="text-gray-600 mt-4">Our pediatricians provide compassionate care from newborn through adolescence, focusing on growth, development, and preventive health.</p>
+                </div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="service-card bg-secondary rounded-xl p-6 hover:shadow-lg transition">
+                    <div class="service-icon text-primary text-3xl mb-4">
+                        <i class="fas fa-baby-carriage"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Well-Baby Visits</h3>
+                    <p class="text-gray-600 mb-4">Regular checkups to monitor growth, development, and provide vaccinations.</p>
+                    <a href="#" class="text-primary font-medium hover:underline inline-flex items-center">
+                        Learn more <i class="fas fa-chevron-right ml-1 text-sm"></i>
+                    </a>
+                </div>
+                
+                <div class="service-card bg-secondary rounded-xl p-6 hover:shadow-lg transition">
+                    <div class="service-icon text-primary text-3xl mb-4">
+                        <i class="fas fa-child"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Developmental Screenings</h3>
+                    <p class="text-gray-600 mb-4">Assessments for speech, motor skills, and social-emotional development.</p>
+                    <a href="#" class="text-primary font-medium hover:underline inline-flex items-center">
+                        Learn more <i class="fas fa-chevron-right ml-1 text-sm"></i>
+                    </a>
+                </div>
+                
+                <div class="service-card bg-secondary rounded-xl p-6 hover:shadow-lg transition">
+                    <div class="service-icon text-primary text-3xl mb-4">
+                        <i class="fas fa-thermometer"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Sick Visits</h3>
+                    <p class="text-gray-600 mb-4">Evaluation and treatment for acute illnesses, infections, and injuries.</p>
+                    <a href="#" class="text-primary font-medium hover:underline inline-flex items-center">
+                        Learn more <i class="fas fa-chevron-right ml-1 text-sm"></i>
+                    </a>
+                </div>
+                
+                <div class="service-card bg-secondary rounded-xl p-6 hover:shadow-lg transition">
+                    <div class="service-icon text-primary text-3xl mb-4">
+                        <i class="fas fa-allergies"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Allergy & Asthma Care</h3>
+                    <p class="text-gray-600 mb-4">Diagnosis and management of childhood allergies and asthma.</p>
+                    <a href="#" class="text-primary font-medium hover:underline inline-flex items-center">
+                        Learn more <i class="fas fa-chevron-right ml-1 text-sm"></i>
+                    </a>
+                </div>
+                
+                <div class="service-card bg-secondary rounded-xl p-6 hover:shadow-lg transition">
+                    <div class="service-icon text-primary text-3xl mb-4">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">ADHD Evaluations</h3>
+                    <p class="text-gray-600 mb-4">Comprehensive assessments and management plans for attention disorders.</p>
+                    <a href="#" class="text-primary font-medium hover:underline inline-flex items-center">
+                        Learn more <i class="fas fa-chevron-right ml-1 text-sm"></i>
+                    </a>
+                </div>
+                
+                <div class="service-card bg-secondary rounded-xl p-6 hover:shadow-lg transition">
+                    <div class="service-icon text-primary text-3xl mb-4">
+                        <i class="fas fa-comment-medical"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Behavioral Counseling</h3>
+                    <p class="text-gray-600 mb-4">Support for behavioral challenges and parenting strategies.</p>
+                    <a href="#" class="text-primary font-medium hover:underline inline-flex items-center">
+                        Learn more <i class="fas fa-chevron-right ml-1 text-sm"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Women's Health Services -->
+    <section id="womens-health" class="py-16 bg-primary text-white">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center mb-12">
+                <div class="md:w-1/2 mb-8 md:mb-0">
+                    <span class="text-accent font-medium">WOMEN'S HEALTH</span>
+                    <h2 class="text-3xl font-bold mt-2">Comprehensive Gynecological Care</h2>
+                    <p class="opacity-90 mt-4">Our women's health specialists provide compassionate care through all stages of life, from adolescence to menopause and beyond.</p>
+                </div>
+                <div class="md:w-1/2 md:pl-10">
+                    <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Women's Health" class="rounded-xl shadow-lg w-full">
+                </div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="service-card bg-white bg-opacity-10 rounded-xl p-6 hover:shadow-lg transition backdrop-blur-sm">
+                    <div class="service-icon text-accent text-3xl mb-4">
+                        <i class="fas fa-venus"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Annual Well-Woman Exams</h3>
+                    <p class="opacity-90 mb-4">Comprehensive exams including Pap smears, breast exams, and health screenings.</p>
+                    <a href="#" class="text-accent font-medium hover:underline inline-flex items-center">
+                        Learn more <i class="fas fa-chevron-right ml-1 text-sm"></i>
+                    </a>
+                </div>
+                
+                <div class="service-card bg-white bg-opacity-10 rounded-xl p-6 hover:shadow-lg transition backdrop-blur-sm">
+                    <div class="service-icon text-accent text-3xl mb-4">
+                        <i class="fas fa-birthday-cake"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Family Planning</h3>
+                    <p class="opacity-90 mb-4">Contraceptive counseling, preconception counseling, and fertility evaluations.</p>
+                    <a href="#" class="text-accent font-medium hover:underline inline-flex items-center">
+                        Learn more <i class="fas fa-chevron-right ml-1 text-sm"></i>
+                    </a>
+                </div>
+                
+                <div class="service-card bg-white bg-opacity-10 rounded-xl p-6 hover:shadow-lg transition backdrop-blur-sm">
+                    <div class="service-icon text-accent text-3xl mb-4">
+                        <i class="fas fa-baby"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Prenatal Care</h3>
+                    <p class="opacity-90 mb-4">Comprehensive pregnancy care from confirmation through postpartum.</p>
+                    <a href="#" class="text-accent font-medium hover:underline inline-flex items-center">
+                        Learn more <i class="fas fa-chevron-right ml-1 text-sm"></i>
+                    </a>
+                </div>
+                
+                <div class="service-card bg-white bg-opacity-10 rounded-xl p-6 hover:shadow-lg transition backdrop-blur-sm">
+                    <div class="service-icon text-accent text-3xl mb-4">
+                        <i class="fas fa-flask"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Menopause Management</h3>
+                    <p class="opacity-90 mb-4">Personalized treatment plans for symptom relief and long-term health.</p>
+                    <a href="#" class="text-accent font-medium hover:underline inline-flex items-center">
+                        Learn more <i class="fas fa-chevron-right ml-1 text-sm"></i>
+                    </a>
+                </div>
+                
+                <div class="service-card bg-white bg-opacity-10 rounded-xl p-6 hover:shadow-lg transition backdrop-blur-sm">
+                    <div class="service-icon text-accent text-3xl mb-4">
+                        <i class="fas fa-dna"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Genetic Screening</h3>
+                    <p class="opacity-90 mb-4">Testing for hereditary cancer risks and other genetic conditions.</p>
+                    <a href="#" class="text-accent font-medium hover:underline inline-flex items-center">
+                        Learn more <i class="fas fa-chevron-right ml-1 text-sm"></i>
+                    </a>
+                </div>
+                
+                <div class="service-card bg-white bg-opacity-10 rounded-xl p-6 hover:shadow-lg transition backdrop-blur-sm">
+                    <div class="service-icon text-accent text-3xl mb-4">
+                        <i class="fas fa-bone"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Bone Health</h3>
+                    <p class="opacity-90 mb-4">Osteoporosis screening, prevention, and treatment programs.</p>
+                    <a href="#" class="text-accent font-medium hover:underline inline-flex items-center">
+                        Learn more <i class="fas fa-chevron-right ml-1 text-sm"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cardiology Services -->
+    <section id="cardiology" class="py-16 bg-secondary">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center mb-12">
+                <div class="md:w-1/2 mb-8 md:mb-0">
+                    <span class="text-primary font-medium">CARDIOLOGY</span>
+                    <h2 class="text-3xl font-bold mt-2">Advanced Heart Care</h2>
+                    <p class="text-gray-600 mt-4">Our cardiology team provides comprehensive cardiovascular care, from preventive screenings to complex condition management.</p>
+                </div>
+                <div class="md:w-1/2 md:pl-10">
+                    <img src="https://images.unsplash.com/photo-1581595219315-a187dd40c322?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Cardiology" class="rounded-xl shadow-lg w-full">
+                </div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="service-card bg-white rounded-xl p-6 hover:shadow-lg transition">
+                    <div class="service-icon text-primary text-3xl mb-4">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Cardiac Evaluations</h3>
+                    <p class="text-gray-600 mb-4">Comprehensive assessments including EKGs, echocardiograms, and stress tests.</p>
+                    <a href="#" class="text-primary font-medium hover:underline inline-flex items-center">
+                        Learn more <i class="fas fa-chevron-right ml-1 text-sm"></i>
+                    </a>
+                </div>
+                
+                <div class="service-card bg-white rounded-xl p-6 hover:shadow-lg transition">
+                    <div class="service-icon text-primary text-3xl mb-4">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Preventive Cardiology</h3>
+                    <p class="text-gray-600 mb-4">Risk assessment and lifestyle programs to prevent heart disease.</p>
+                    <a href="#" class="text-primary font-medium hover:underline inline-flex items-center">
+                        Learn more <i class="fas fa-chevron-right ml-1 text-sm"></i>
+                    </a>
+                </div>
+                
+                <div class="service-card bg-white rounded-xl p-6 hover:shadow-lg transition">
+                    <div class="service-icon text-primary text-3xl mb-4">
+                        <i class="fas fa-tachometer-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Hypertension Management</h3>
+                    <p class="text-gray-600 mb-4">Personalized treatment plans for high blood pressure control.</p>
+                    <a href="#" class="text-primary font-medium hover:underline inline-flex items-center">
+                        Learn more <i class="fas fa-chevron-right ml-1 text-sm"></i>
+                    </a>
+                </div>
+                
+                <div class="service-card bg-white rounded-xl p-6 hover:shadow-lg transition">
+                    <div class="service-icon text-primary text-3xl mb-4">
+                        <i class="fas fa-weight"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Cholesterol Management</h3>
+                    <p class="text-gray-600 mb-4">Advanced lipid testing and treatment for optimal heart health.</p>
+                    <a href="#" class="text-primary font-medium hover:underline inline-flex items-center">
+                        Learn more <i class="fas fa-chevron-right ml-1 text-sm"></i>
+                    </a>
+                </div>
+                
+                <div class="service-card bg-white rounded-xl p-6 hover:shadow-lg transition">
+                    <div class="service-icon text-primary text-3xl mb-4">
+                        <i class="fas fa-heart-broken"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Heart Failure Program</h3>
+                    <p class="text-gray-600 mb-4">Comprehensive care for patients with heart failure.</p>
+                    <a href="#" class="text-primary font-medium hover:underline inline-flex items-center">
+                        Learn more <i class="fas fa-chevron-right ml-1 text-sm"></i>
+                    </a>
+                </div>
+                
+                <div class="service-card bg-white rounded-xl p-6 hover:shadow-lg transition">
+                    <div class="service-icon text-primary text-3xl mb-4">
+                        <i class="fas fa-clipboard-list"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Cardiac Rehabilitation</h3>
+                    <p class="text-gray-600 mb-4">Supervised exercise and education programs after cardiac events.</p>
+                    <a href="#" class="text-primary font-medium hover:underline inline-flex items-center">
+                        Learn more <i class="fas fa-chevron-right ml-1 text-sm"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold mb-6">Don't See the Service You Need?</h2>
+            <p class="text-xl max-w-2xl mx-auto mb-8 text-gray-600">We offer many additional specialty services. Contact us to learn more about our complete range of medical care.</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <button class="bg-primary text-white px-8 py-3 rounded-lg hover:bg-opacity-90 transition font-medium shadow-lg">
+                    <i class="fas fa-calendar-alt mr-2"></i> Book an Appointment
+                </button>
+                <button class="bg-secondary text-primary px-8 py-3 rounded-lg hover:bg-gray-100 transition font-medium border border-gray-200">
+                    <i class="fas fa-phone-alt mr-2"></i> Call Us: (555) 123-4567
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white pt-16 pb-8">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8 mb-12">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <div class="text-2xl font-bold text-white mr-2">HARMONY</div>
+                        <span class="text-sm font-medium bg-primary text-white px-2 py-1 rounded">MEDICAL</span>
+                    </div>
+                    <p class="text-gray-400 mb-6">Providing compassionate, high-quality healthcare for our community since 2005.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white transition">Home</a></li>
+                        <li><a href="doctors.html" class="text-gray-400 hover:text-white transition">Our Doctors</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-white transition">Services</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-white transition">About Us</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Medical Services</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#primary-care" class="text-gray-400 hover:text-white transition">Primary Care</a></li>
+                        <li><a href="#pediatrics" class="text-gray-400 hover:text-white transition">Pediatrics</a></li>
+                        <li><a href="#womens-health" class="text-gray-400 hover:text-white transition">Women's Health</a></li>
+                        <li><a href="#cardiology" class="text-gray-400 hover:text-white transition">Cardiology</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">View All Services</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Contact Information</h3>
+                    <address class="not-italic text-gray-400">
+                        <p class="flex items-start mb-3">
+                            <i class="fas fa-map-marker-alt mt-1 mr-3 text-primary"></i>
+                            <span>123 Medical Center Drive<br>Healthville, HV 12345</span>
+                        </p>
+                        <p class="flex items-center mb-3">
+                            <i class="fas fa-phone-alt mr-3 text-primary"></i>
+                            <span>Main: (555) 123-4567<br>Appointments: (555) 987-6543</span>
+                        </p>
+                        <p class="flex items-center">
+                            <i class="fas fa-envelope mr-3 text-primary"></i>
+                            <span>info@harmonymedical.com</span>
+                        </p>
+                    </address>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm">&copy; 2023 Harmony Medical Center. All rights reserved.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="text-gray-400 hover:text-white text-sm transition">Privacy Policy</a>
+                    <a href="#" class="text-gray-400 hover:text-white text-sm transition">Terms of Service</a>
+                    <a href="#" class="text-gray-400 hover:text-white text-sm transition">Accessibility</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/service.js"></script>
+</body>
+</html>

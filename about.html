@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Harmony Medical Center</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#670D2F',
+                        secondary: '#F8F9FA',
+                        accent: '#D4AFB9',
+                        dark: '#212529',
+                    },
+                    fontFamily: {
+                        poppins: ['Poppins', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        .timeline-item:not(:last-child):after {
+            content: '';
+            position: absolute;
+            left: 7px;
+            top: 24px;
+            height: 100%;
+            width: 2px;
+            background: #D4AFB9;
+        }
+        .team-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body class="font-poppins bg-secondary text-dark">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md fixed w-full z-50">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <div class="text-2xl font-bold text-primary mr-2">HARMONY</div>
+                <span class="text-sm font-medium bg-primary text-white px-2 py-1 rounded">MEDICAL</span>
+            </div>
+            
+            <div class="hidden lg:flex items-center space-x-8">
+                <a href="./index.html" class="font-medium hover:text-primary transition">Home</a>
+                <a href="./doctor.html" class="font-medium hover:text-primary transition">Our Doctors</a>
+                <a href="./service.html" class="font-medium hover:text-primary transition">Services</a>
+                <a href="./about.html" class="font-medium text-primary border-b-2 border-primary pb-1">About Us</a>
+                <a href="./contact.html" class="font-medium hover:text-primary transition">Contact</a>
+                <button class="bg-primary text-white px-6 py-2 rounded-lg hover:bg-opacity-90 transition font-medium shadow-md">
+                    <i class="fas fa-calendar-check mr-2"></i>Book Appointment
+                </button>
+            </div>
+            
+            <button class="lg:hidden focus:outline-none" id="menu-toggle">
+                <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div class="lg:hidden hidden bg-white w-full py-4 px-6 shadow-lg" id="mobile-menu">
+            <a href="./about.html" class="block py-2 hover:text-primary transition">Home</a>
+            <a href="./doctor.html" class="block py-2 hover:text-primary transition">Our Doctors</a>
+            <a href="./service.html" class="block py-2 hover:text-primary transition">Services</a>
+            <a href="./about.html" class="block py-2 font-medium text-primary">About Us</a>
+            <a href="./contact.html" class="block py-2 hover:text-primary transition">Contact</a>
+            <button class="bg-primary text-white px-6 py-2 rounded-lg hover:bg-opacity-90 transition font-medium mt-2 w-full">
+                <i class="fas fa-calendar-check mr-2"></i>Book Appointment
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 bg-primary text-white">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Our Story & Values</h1>
+            <p class="text-xl max-w-3xl mx-auto opacity-90">Committed to excellence in healthcare since 2005, serving our community with compassion and innovation.</p>
+        </div>
+    </section>
+
+    <!-- About Clinic Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col lg:flex-row items-center">
+                <div class="lg:w-1/2 mb-10 lg:mb-0 lg:pr-10">
+                    <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Harmony Medical Center" class="rounded-xl shadow-lg w-full">
+                </div>
+                <div class="lg:w-1/2">
+                    <span class="text-primary font-medium">ABOUT OUR CLINIC</span>
+                    <h2 class="text-3xl font-bold mt-2 mb-6">A Legacy of Compassionate Care</h2>
+                    <p class="text-gray-600 mb-6">Founded in 2005 by Dr. James Wilson, Harmony Medical Center began as a small practice with a big vision: to provide personalized, high-quality healthcare to our community. Today, we've grown into a comprehensive multi-specialty clinic while maintaining our founding principles.</p>
+                    <p class="text-gray-600 mb-6">Our 15,000 square foot facility features state-of-the-art examination rooms, an on-site laboratory, advanced diagnostic imaging, and comfortable patient areas designed to reduce stress and promote healing.</p>
+                    <div class="grid sm:grid-cols-2 gap-6">
+                        <div>
+                            <div class="text-primary text-3xl mb-2">
+                                <i class="fas fa-user-md"></i>
+                            </div>
+                            <h3 class="text-xl font-bold mb-2">30+ Specialists</h3>
+                            <p class="text-gray-600">Board-certified physicians across 12 medical specialties.</p>
+                        </div>
+                        <div>
+                            <div class="text-primary text-3xl mb-2">
+                                <i class="fas fa-procedures"></i>
+                            </div>
+                            <h3 class="text-xl font-bold mb-2">Advanced Technology</h3>
+                            <p class="text-gray-600">Cutting-edge diagnostic and treatment equipment.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission & Values -->
+    <section class="py-16 bg-secondary">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <span class="text-primary font-medium">OUR PHILOSOPHY</span>
+                <h2 class="text-3xl font-bold mt-2">Guiding Principles That Define Us</h2>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-xl text-center">
+                    <div class="bg-primary text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 text-2xl">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Patient-Centered Care</h3>
+                    <p class="text-gray-600">We listen first, then develop personalized treatment plans that respect your unique needs and preferences.</p>
+                </div>
+                
+                <div class="bg-white p-8 rounded-xl text-center">
+                    <div class="bg-primary text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 text-2xl">
+                        <i class="fas fa-flask"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Evidence-Based Medicine</h3>
+                    <p class="text-gray-600">Our treatments and recommendations are grounded in the latest medical research and clinical guidelines.</p>
+                </div>
+                
+                <div class="bg-white p-8 rounded-xl text-center">
+                    <div class="bg-primary text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 text-2xl">
+                        <i class="fas fa-hands-helping"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Community Focus</h3>
+                    <p class="text-gray-600">We're committed to improving health outcomes not just for our patients, but for our entire community.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <span class="text-primary font-medium">OUR JOURNEY</span>
+                <h2 class="text-3xl font-bold mt-2">Milestones in Our History</h2>
+            </div>
+            
+            <div class="max-w-3xl mx-auto">
+                <!-- Timeline Item 1 -->
+                <div class="relative timeline-item pl-8 pb-10">
+                    <div class="absolute left-0 bg-primary text-white rounded-full w-4 h-4 flex items-center justify-center mt-1"></div>
+                    <h3 class="text-xl font-bold mb-2">2005 - Foundation</h3>
+                    <p class="text-gray-600">Dr. James Wilson opens Harmony Family Practice with two exam rooms and a vision for patient-centered care.</p>
+                </div>
+                
+                <!-- Timeline Item 2 -->
+                <div class="relative timeline-item pl-8 pb-10">
+                    <div class="absolute left-0 bg-primary text-white rounded-full w-4 h-4 flex items-center justify-center mt-1"></div>
+                    <h3 class="text-xl font-bold mb-2">2010 - First Expansion</h3>
+                    <p class="text-gray-600">Added pediatric services and moved to our current location with 8 exam rooms and an on-site lab.</p>
+                </div>
+                
+                <!-- Timeline Item 3 -->
+                <div class="relative timeline-item pl-8 pb-10">
+                    <div class="absolute left-0 bg-primary text-white rounded-full w-4 h-4 flex items-center justify-center mt-1"></div>
+                    <h3 class="text-xl font-bold mb-2">2015 - Multi-Specialty Center</h3>
+                    <p class="text-gray-600">Became Harmony Medical Center with the addition of cardiology, dermatology, and women's health services.</p>
+                </div>
+                
+                <!-- Timeline Item 4 -->
+                <div class="relative timeline-item pl-8 pb-10">
+                    <div class="absolute left-0 bg-primary text-white rounded-full w-4 h-4 flex items-center justify-center mt-1"></div>
+                    <h3 class="text-xl font-bold mb-2">2020 - Technology Upgrade</h3>
+                    <p class="text-gray-600">Implemented electronic health records system and telemedicine capabilities to enhance patient access.</p>
+                </div>
+                
+                <!-- Timeline Item 5 -->
+                <div class="relative timeline-item pl-8">
+                    <div class="absolute left-0 bg-primary text-white rounded-full w-4 h-4 flex items-center justify-center mt-1"></div>
+                    <h3 class="text-xl font-bold mb-2">2023 - Present Day</h3>
+                    <p class="text-gray-600">Now serving over 15,000 patients annually with 30+ providers across 12 specialties in our expanded facility.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Leadership Team -->
+    <section class="py-16 bg-primary text-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <span class="text-accent font-medium">MEET OUR LEADERS</span>
+                <h2 class="text-3xl font-bold mt-2">Our Executive Team</h2>
+            </div>
+            
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Leader 1 -->
+                <div class="team-card bg-white bg-opacity-10 rounded-xl overflow-hidden hover:shadow-lg transition backdrop-blur-sm">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1528&q=80" alt="Dr. James Wilson" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-1">Dr. James Wilson</h3>
+                        <p class="text-accent font-medium mb-3">Founder & Medical Director</p>
+                        <p class="text-sm opacity-90">Board-certified internist with 25 years of clinical experience and a passion for community health.</p>
+                    </div>
+                </div>
+                
+                <!-- Leader 2 -->
+                <div class="team-card bg-white bg-opacity-10 rounded-xl overflow-hidden hover:shadow-lg transition backdrop-blur-sm">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Sarah Johnson" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-1">Sarah Johnson</h3>
+                        <p class="text-accent font-medium mb-3">Chief Operating Officer</p>
+                        <p class="text-sm opacity-90">Healthcare administrator with 15 years of experience optimizing clinical operations.</p>
+                    </div>
+                </div>
+                
+                <!-- Leader 3 -->
+                <div class="team-card bg-white bg-opacity-10 rounded-xl overflow-hidden hover:shadow-lg transition backdrop-blur-sm">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Dr. Michael Chen" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-1">Dr. Michael Chen</h3>
+                        <p class="text-accent font-medium mb-3">Chief Medical Officer</p>
+                        <p class="text-sm opacity-90">Pediatric specialist leading our quality improvement and physician training initiatives.</p>
+                    </div>
+                </div>
+                
+                <!-- Leader 4 -->
+                <div class="team-card bg-white bg-opacity-10 rounded-xl overflow-hidden hover:shadow-lg transition backdrop-blur-sm">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Lisa Martinez" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-1">Lisa Martinez</h3>
+                        <p class="text-accent font-medium mb-3">Patient Experience Director</p>
+                        <p class="text-sm opacity-90">Dedicated to ensuring every patient receives compassionate, personalized care.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <span class="text-primary font-medium">PATIENT STORIES</span>
+                <h2 class="text-3xl font-bold mt-2">What Our Patients Say</h2>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-secondary p-8 rounded-xl">
+                    <div class="text-primary text-2xl mb-4">
+                        <i class="fas fa-quote-left"></i>
+                    </div>
+                    <p class="mb-6 italic">"The care I've received at Harmony Medical Center has been exceptional. Dr. Wilson takes the time to listen and explain everything in terms I can understand."</p>
+                    <div class="flex items-center">
+                        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=688&q=80" alt="Patient" class="w-12 h-12 rounded-full object-cover mr-4">
+                        <div>
+                            <p class="font-bold">Maria Gonzalez</p>
+                            <p class="text-sm text-gray-600">Patient since 2012</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-secondary p-8 rounded-xl">
+                    <div class="text-primary text-2xl mb-4">
+                        <i class="fas fa-quote-left"></i>
+                    </div>
+                    <p class="mb-6 italic">"As someone with multiple chronic conditions, I appreciate how all my specialists coordinate care through Harmony's integrated system."</p>
+                    <div class="flex items-center">
+                        <img src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Patient" class="w-12 h-12 rounded-full object-cover mr-4">
+                        <div>
+                            <p class="font-bold">Robert Thompson</p>
+                            <p class="text-sm text-gray-600">Patient since 2015</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-secondary p-8 rounded-xl">
+                    <div class="text-primary text-2xl mb-4">
+                        <i class="fas fa-quote-left"></i>
+                    </div>
+                    <p class="mb-6 italic">"From pediatrics to dermatology, my whole family receives excellent care at Harmony. The online appointment system makes scheduling so easy."</p>
+                    <div class="flex items-center">
+                        <img src="https://images.unsplash.com/photo-1551836022-d5d9e2e9a9c5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Patient" class="w-12 h-12 rounded-full object-cover mr-4">
+                        <div>
+                            <p class="font-bold">The Johnson Family</p>
+                            <p class="text-sm text-gray-600">Patients since 2018</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-secondary">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold mb-6">Experience the Harmony Difference</h2>
+            <p class="text-xl max-w-2xl mx-auto mb-8 text-gray-600">Join thousands of satisfied patients who trust us with their healthcare needs.</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <button class="bg-primary text-white px-8 py-3 rounded-lg hover:bg-opacity-90 transition font-medium shadow-lg">
+                    <i class="fas fa-calendar-alt mr-2"></i> Book an Appointment
+                </button>
+                <button class="bg-white text-primary px-8 py-3 rounded-lg hover:bg-gray-100 transition font-medium border border-gray-200">
+                    <i class="fas fa-phone-alt mr-2"></i> Call Us: (555) 123-4567
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white pt-16 pb-8">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8 mb-12">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <div class="text-2xl font-bold text-white mr-2">HARMONY</div>
+                        <span class="text-sm font-medium bg-primary text-white px-2 py-1 rounded">MEDICAL</span>
+                    </div>
+                    <p class="text-gray-400 mb-6">Providing compassionate, high-quality healthcare for our community since 2005.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white transition">Home</a></li>
+                        <li><a href="doctors.html" class="text-gray-400 hover:text-white transition">Our Doctors</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-white transition">Services</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-white transition">About Us</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Medical Services</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Primary Care</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Pediatrics</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Women's Health</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Cardiology</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">View All Services</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Contact Information</h3>
+                    <address class="not-italic text-gray-400">
+                        <p class="flex items-start mb-3">
+                            <i class="fas fa-map-marker-alt mt-1 mr-3 text-primary"></i>
+                            <span>123 Medical Center Drive<br>Healthville, HV 12345</span>
+                        </p>
+                        <p class="flex items-center mb-3">
+                            <i class="fas fa-phone-alt mr-3 text-primary"></i>
+                            <span>Main: (555) 123-4567<br>Appointments: (555) 987-6543</span>
+                        </p>
+                        <p class="flex items-center">
+                            <i class="fas fa-envelope mr-3 text-primary"></i>
+                            <span>info@harmonymedical.com</span>
+                        </p>
+                    </address>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm">&copy; 2023 Harmony Medical Center. All rights reserved.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="text-gray-400 hover:text-white text-sm transition">Privacy Policy</a>
+                    <a href="#" class="text-gray-400 hover:text-white text-sm transition">Terms of Service</a>
+                    <a href="#" class="text-gray-400 hover:text-white text-sm transition">Accessibility</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+<script src="js/about.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harmony Medical Center | Comprehensive Healthcare</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style/css.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#670D2F',
+                        secondary: '#F8F9FA',
+                        accent: '#D4AFB9',
+                        dark: '#212529',
+                    },
+                    fontFamily: {
+                        poppins: ['Poppins', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        .hero-gradient {
+            background: linear-gradient(135deg, rgba(103,13,47,0.9) 0%, rgba(103,13,47,0.7) 100%);
+        }
+        .service-card:hover .service-icon {
+            transform: translateY(-5px);
+        }
+    </style>
+</head>
+<body class="font-poppins bg-secondary text-dark">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md fixed w-full z-50">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <div class="text-2xl font-bold text-primary mr-2">HARMONY</div>
+                <span class="text-sm font-medium bg-primary text-white px-2 py-1 rounded">MEDICAL</span>
+            </div>
+            
+            <div class="hidden lg:flex items-center space-x-8">
+                <a href="./index.html" class="font-medium text-primary border-b-2 border-primary pb-1">Home</a>
+                <a href="./doctor.html" class="font-medium hover:text-primary transition">Our Doctors</a>
+                <a href="./service.html" class="font-medium hover:text-primary transition">Services</a>
+                <a href="./about.html" class="font-medium hover:text-primary transition">About Us</a>
+                <a href="./contact.html" class="font-medium hover:text-primary transition">Contact</a>
+                <button class="bg-primary text-white px-6 py-2 rounded-lg hover:bg-opacity-90 transition font-medium shadow-md">
+                    <i class="fas fa-calendar-check mr-2"></i>Book Appointment
+                </button>
+            </div>
+            
+            <button class="lg:hidden focus:outline-none" id="menu-toggle">
+                <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div class="lg:hidden hidden bg-white w-full py-4 px-6 shadow-lg" id="mobile-menu">
+            <a href="./index.html" class="block py-2 font-medium text-primary">Home</a>
+            <a href="./doctor.html" class="block py-2 hover:text-primary transition">Our Doctors</a>
+            <a href="./service.html" class="block py-2 hover:text-primary transition">Services</a>
+            <a href="./about.html" class="block py-2 hover:text-primary transition">About Us</a>
+            <a href="./contact.html" class="block py-2 hover:text-primary transition">Contact</a>
+            <button class="bg-primary text-white px-6 py-2 rounded-lg hover:bg-opacity-90 transition font-medium mt-2 w-full">
+                <i class="fas fa-calendar-check mr-2"></i>Book Appointment </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-24 pb-16 md:pt-32 md:pb-24 bg-cover bg-center hero-gradient" style="background-image: url('https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');">
+        <div class="container mx-auto px-6 text-white">
+            <div class="max-w-2xl">
+                <span class="bg-white text-primary px-4 py-1 rounded-full text-sm font-medium mb-4 inline-block">WELCOME TO HARMONY</span>
+                <h1 class="text-4xl md:text-5xl font-bold mb-6 leading-tight">Exceptional Healthcare for Your Entire Family</h1>
+                <p class="text-lg md:text-xl mb-8 opacity-90">Our team of board-certified physicians provides compassionate, personalized care using the latest medical advancements in a comfortable environment.</p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <button class="bg-white text-primary px-8 py-3 rounded-lg hover:bg-opacity-90 transition font-medium shadow-lg flex items-center justify-center">
+                        <i class="fas fa-calendar-alt mr-2"></i> Schedule a Visit
+                    </button>
+                    <button class="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg hover:bg-white hover:bg-opacity-10 transition font-medium flex items-center justify-center">
+                        <i class="fas fa-phone-alt mr-2"></i> (555) 123-4567
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Appointment -->
+    <section class="py-8 bg-primary text-white shadow-lg">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center justify-between">
+                <div class="mb-4 md:mb-0">
+                    <h3 class="text-xl font-bold mb-1">Need to see a doctor today?</h3>
+                    <p>Same-day appointments available for urgent care needs.</p>
+                </div>
+                <button class="bg-white text-primary px-8 py-3 rounded-lg hover:bg-opacity-90 transition font-medium shadow-md whitespace-nowrap">
+                    <i class="fas fa-clock mr-2"></i> Request Urgent Care
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <span class="text-primary font-medium">WHY CHOOSE US</span>
+                <h2 class="text-3xl font-bold mt-2">Compassionate Care You Can Trust</h2>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-secondary p-8 rounded-xl text-center hover:shadow-lg transition">
+                    <div class="bg-primary text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 text-2xl">
+                        <i class="fas fa-user-md"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Expert Physicians</h3>
+                    <p class="text-gray-600">Our doctors are board-certified specialists with extensive experience in their fields.</p>
+                </div>
+                
+                <div class="bg-secondary p-8 rounded-xl text-center hover:shadow-lg transition">
+                    <div class="bg-primary text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 text-2xl">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Patient-Centered Approach</h3>
+                    <p class="text-gray-600">We listen to your concerns and develop personalized treatment plans.</p>
+                </div>
+                
+                <div class="bg-secondary p-8 rounded-xl text-center hover:shadow-lg transition">
+                    <div class="bg-primary text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 text-2xl">
+                        <i class="fas fa-clinic-medical"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Modern Facility</h3>
+                    <p class="text-gray-600">State-of-the-art equipment in a comfortable, welcoming environment.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Doctors Preview -->
+    <section id="doctors" class="py-16 bg-secondary">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <span class="text-primary font-medium">OUR SPECIALISTS</span>
+                <h2 class="text-3xl font-bold mt-2">Meet Our Medical Team</h2>
+                <p class="max-w-2xl mx-auto text-gray-600 mt-4">Our diverse team of healthcare professionals brings together expertise from various medical specialties to provide comprehensive care.</p>
+            </div>
+            
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Doctor 1 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition transform hover:-translate-y-2">
+                    <div class="h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Dr. Sarah Johnson" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6 text-center">
+                        <h3 class="text-xl font-bold mb-1">Dr. Sarah Johnson</h3>
+                        <p class="text-primary font-medium mb-4">Internal Medicine</p>
+                        <div class="flex justify-center space-x-4 text-gray-500">
+                            <a href="#" class="hover:text-primary"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" class="hover:text-primary"><i class="fas fa-envelope"></i></a>
+                        </div>
+                        <button class="mt-4 text-primary font-medium hover:underline">View Full Profile →</button>
+                    </div>
+                </div>
+                
+                <!-- Doctor 2 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition transform hover:-translate-y-2">
+                    <div class="h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1528&q=80" alt="Dr. Michael Chen" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6 text-center">
+                        <h3 class="text-xl font-bold mb-1">Dr. Michael Chen</h3>
+                        <p class="text-primary font-medium mb-4">Pediatrics</p>
+                        <div class="flex justify-center space-x-4 text-gray-500">
+                            <a href="#" class="hover:text-primary"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" class="hover:text-primary"><i class="fas fa-envelope"></i></a>
+                        </div>
+                        <button class="mt-4 text-primary font-medium hover:underline">View Full Profile →</button>
+                    </div>
+                </div>
+                
+                <!-- Doctor 3 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition transform hover:-translate-y-2">
+                    <div class="h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Dr. Emma Wilson" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6 text-center">
+                        <h3 class="text-xl font-bold mb-1">Dr. Emma Wilson</h3>
+                        <p class="text-primary font-medium mb-4">Dermatology</p>
+                        <div class="flex justify-center space-x-4 text-gray-500">
+                            <a href="#" class="hover:text-primary"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" class="hover:text-primary"><i class="fas fa-envelope"></i></a>
+                        </div>
+                        <button class="mt-4 text-primary font-medium hover:underline">View Full Profile →</button>
+                    </div>
+                </div>
+                
+                <!-- Doctor 4 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition transform hover:-translate-y-2">
+                    <div class="h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1651008376811-b90baee60c1f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Dr. James Rodriguez" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6 text-center">
+                        <h3 class="text-xl font-bold mb-1">Dr. James Rodriguez</h3>
+                        <p class="text-primary font-medium mb-4">Cardiology</p>
+                        <div class="flex justify-center space-x-4 text-gray-500">
+                            <a href="#" class="hover:text-primary"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" class="hover:text-primary"><i class="fas fa-envelope"></i></a>
+                        </div>
+                        <button class="mt-4 text-primary font-medium hover:underline">View Full Profile →</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <button class="bg-primary text-white px-8 py-3 rounded-lg hover:bg-opacity-90 transition font-medium shadow-md">
+                    View All Specialists
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Preview -->
+    <section id="services" class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <span class="text-primary font-medium">OUR SERVICES</span>
+                <h2 class="text-3xl font-bold mt-2">Comprehensive Medical Care</h2>
+                <p class="max-w-2xl mx-auto text-gray-600 mt-4">We offer a wide range of medical services to address all your healthcare needs under one roof.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Service 1 -->
+                <div class="bg-secondary rounded-xl p-6 hover:shadow-lg transition group">
+                    <div class="service-icon bg-primary text-white w-14 h-14 rounded-full flex items-center justify-center mb-6 text-2xl transition">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Primary Care</h3>
+                    <p class="text-gray-600 mb-4">Annual physicals, preventive care, and treatment for common illnesses from our experienced primary care physicians.</p>
+                    <a href="#" class="text-primary font-medium hover:underline inline-flex items-center">
+                        Learn More <i class="fas fa-chevron-right ml-2 text-sm"></i>
+                    </a>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="bg-secondary rounded-xl p-6 hover:shadow-lg transition group">
+                    <div class="service-icon bg-primary text-white w-14 h-14 rounded-full flex items-center justify-center mb-6 text-2xl transition">
+                        <i class="fas fa-baby"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Pediatrics</h3>
+                    <p class="text-gray-600 mb-4">Comprehensive healthcare for infants, children, and adolescents in a child-friendly environment.</p>
+                    <a href="#" class="text-primary font-medium hover:underline inline-flex items-center">
+                        Learn More <i class="fas fa-chevron-right ml-2 text-sm"></i>
+                    </a>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="bg-secondary rounded-xl p-6 hover:shadow-lg transition group">
+                    <div class="service-icon bg-primary text-white w-14 h-14 rounded-full flex items-center justify-center mb-6 text-2xl transition">
+                        <i class="fas fa-female"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Women's Health</h3>
+                    <p class="text-gray-600 mb-4">Complete gynecological care, including annual exams, family planning, and menopause management.</p>
+                    <a href="#" class="text-primary font-medium hover:underline inline-flex items-center">
+                        Learn More <i class="fas fa-chevron-right ml-2 text-sm"></i>
+                    </a>
+                </div>
+                
+                <!-- Service 4 -->
+                <div class="bg-secondary rounded-xl p-6 hover:shadow-lg transition group">
+                    <div class="service-icon bg-primary text-white w-14 h-14 rounded-full flex items-center justify-center mb-6 text-2xl transition">
+                        <i class="fas fa-allergies"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Dermatology</h3>
+                    <p class="text-gray-600 mb-4">Skin cancer screenings, acne treatment, psoriasis care, and cosmetic dermatology services.</p>
+                    <a href="#" class="text-primary font-medium hover:underline inline-flex items-center">
+                        Learn More <i class="fas fa-chevron-right ml-2 text-sm"></i>
+                    </a>
+                </div>
+                
+                <!-- Service 5 -->
+                <div class="bg-secondary rounded-xl p-6 hover:shadow-lg transition group">
+                    <div class="service-icon bg-primary text-white w-14 h-14 rounded-full flex items-center justify-center mb-6 text-2xl transition">
+                        <i class="fas fa-tooth"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Dental Care</h3>
+                    <p class="text-gray-600 mb-4">Preventive, restorative, and cosmetic dentistry services for patients of all ages.</p>
+                    <a href="#" class="text-primary font-medium hover:underline inline-flex items-center">
+                        Learn More <i class="fas fa-chevron-right ml-2 text-sm"></i>
+                    </a>
+                </div>
+                
+                <!-- Service 6 -->
+                <div class="bg-secondary rounded-xl p-6 hover:shadow-lg transition group">
+                    <div class="service-icon bg-primary text-white w-14 h-14 rounded-full flex items-center justify-center mb-6 text-2xl transition">
+                        <i class="fas fa-x-ray"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Diagnostic Services</h3>
+                    <p class="text-gray-600 mb-4">On-site laboratory testing, imaging services, and health screenings for early detection.</p>
+                    <a href="#" class="text-primary font-medium hover:underline inline-flex items-center">
+                        Learn More <i class="fas fa-chevron-right ml-2 text-sm"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-primary text-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold mb-6">Ready to Experience Exceptional Healthcare?</h2>
+            <p class="text-xl max-w-2xl mx-auto mb-8 opacity-90">Schedule your appointment today and take the first step toward better health.</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <button class="bg-white text-primary px-8 py-3 rounded-lg hover:bg-opacity-90 transition font-medium shadow-lg">
+                    <i class="fas fa-calendar-alt mr-2"></i> Book Online
+                </button>
+                <button class="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg hover:bg-white hover:bg-opacity-10 transition font-medium">
+                    <i class="fas fa-phone-alt mr-2"></i> Call Us: (555) 123-4567
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white pt-16 pb-8">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8 mb-12">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <div class="text-2xl font-bold text-white mr-2">HARMONY</div>
+                        <span class="text-sm font-medium bg-primary text-white px-2 py-1 rounded">MEDICAL</span>
+                    </div>
+                    <p class="text-gray-400 mb-6">Providing compassionate, high-quality healthcare for our community since 2005.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="./index.html" class="text-gray-400 hover:text-white transition">Home</a></li>
+                        <li><a href="./doctor.html" class="text-gray-400 hover:text-white transition">Our Doctors</a></li>
+                        <li><a href="./service.html" class="text-gray-400 hover:text-white transition">Services</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition">About Us</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Services</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Primary Care</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Pediatrics</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Women's Health</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Dermatology</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Dental Care</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Contact Us</h3>
+                    <address class="not-italic text-gray-400">
+                        <p class="flex items-start mb-3">
+                            <i class="fas fa-map-marker-alt mt-1 mr-3 text-primary"></i>
+                            <span>123 Medical Center Drive<br>Healthville, HV 12345</span>
+                        </p>
+                        <p class="flex items-center mb-3">
+                            <i class="fas fa-phone-alt mr-3 text-primary"></i>
+                            <span>(555) 123-4567</span>
+                        </p>
+                        <p class="flex items-center">
+                            <i class="fas fa-envelope mr-3 text-primary"></i>
+                            <span>info@harmonymedical.com</span>
+                        </p>
+                    </address>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm">&copy; 2023 Harmony Medical Center. All rights reserved.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="text-gray-400 hover:text-white text-sm transition">Privacy Policy</a>
+                    <a href="#" class="text-gray-400 hover:text-white text-sm transition">Terms of Service</a>
+                    <a href="#" class="text-gray-400 hover:text-white text-sm transition">Accessibility</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/index.js"></script>
+</body>
+</html>
